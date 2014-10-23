@@ -1,0 +1,22 @@
+{
+  "name": "nightmare-screenshot",
+  "version": "0.0.1",
+  "description": "Nightmare plugin for improved screenshot",
+  "main": "index.js",
+  "author": "Rize MISUMI <r@ayase-e.li>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MisumiRize/nightmare-screenshot.git"
+  },
+  "keywords": [
+    "nightmare",
+    "phantomjs",
+    "screenshot"
+  ],
+  "author": "Rize MISUMI <r@ayase-e.li>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MisumiRize/nightmare-screenshot/issues"
+  },
+  "homepage": "https://github.com/MisumiRize/nightmare-screenshot"
+}
