@@ -13,16 +13,30 @@ var screenshotRect = exports.screenshotRect = function (path, rect) {
 
 var screenshotSelector = exports.screenshotSelector = function(path, selector) {
     return function(nightmare) {
-        nightmare.evaluate(function(_selector) {
-            var _element = document.querySelector(_selector);
-            if (_element) {
-                return _element.getBoundingClientRect();
-            }
-        }, function(rect) {
-            if (!rect) {
-                throw new Error('invalid selector' + selector);
-            }
-            nightmare.use(screenshotRect(path, rect));
-        }, selector);
+        nightmare.url()
+            .then(function(url) {
+                nightmare.goto(url)
+                    .evaluate(function(_selector) {
+                        var _element = document.querySelector(_selector);
+                        if (_element) {
+                            var rect = _element.getBoundingClientRect();
+                            return {
+                                x: Math.round(rect.left),
+                                y: Math.round(rect.top),
+                                width: Math.round(rect.width),
+                                height: Math.round(rect.height)
+                            };
+                        }
+                    }, selector)
+                    .then(function(rect) {
+                        if (!rect) {
+                            throw new Error('invalid selector' + selector);
+                        } else {
+                            return nightmare.goto(url)
+                                .screenshot(path, rect)
+                                .end();
+                        }
+                    });
+            });
     };
 };
