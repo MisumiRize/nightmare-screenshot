@@ -1,6 +1,6 @@
 {
   "name": "nightmare-screenshot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nightmare plugin for improved screenshot",
   "main": "index.js",
   "author": "Rize MISUMI <r@ayase-e.li>",
