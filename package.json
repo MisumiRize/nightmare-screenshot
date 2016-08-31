@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/MisumiRize/nightmare-screenshot/issues"
   },
-  "homepage": "https://github.com/MisumiRize/nightmare-screenshot"
+  "homepage": "https://github.com/MisumiRize/nightmare-screenshot",
+  "peerDependencies": {
+    "nightmare": "1.x"
+  }
 }
