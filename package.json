@@ -13,13 +13,22 @@
     "phantomjs",
     "screenshot"
   ],
-  "author": "Rize MISUMI <r@ayase-e.li>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MisumiRize/nightmare-screenshot/issues"
   },
   "homepage": "https://github.com/MisumiRize/nightmare-screenshot",
   "peerDependencies": {
-    "nightmare": "1.x"
+    "nightmare": ">= 2.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "nightmare": "^2.6.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "scripts": {
+    "test": "mocha test/*.test.js -t 5000"
   }
 }
