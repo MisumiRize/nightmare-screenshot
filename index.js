@@ -1,16 +1,3 @@
-var clipRect = exports.clipRect = function(rect) {
-    return function(nightmare) {
-        nightmare.page.set('clipRect', rect);
-    };
-};
-
-var screenshotRect = exports.screenshotRect = function (path, rect) {
-    return function(nightmare) {
-        nightmare.use(clipRect(rect))
-            .screenshot(path);
-    };
-};
-
 var screenshotSelector = exports.screenshotSelector = function(path, selector, cb) {
     if (typeof cb != 'function') {
         cb = () => { };

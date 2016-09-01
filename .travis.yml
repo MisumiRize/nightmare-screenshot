@@ -8,5 +8,6 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
 notifications:
+  email: false
   slack:
     secure: mBJoNzCgsAUYvExE4cuT4VV1XPAVnqJVwCiVIGwkB6M8cNuRbbZ5jPAnyDYWCpCZHWyegVjP1yv3qYs385l7UACFQ3PSXgv3BJI6Nj0npIPOIQy5JRw0voa0PdWrBvJOCY9qQH7dW/phWp0gCyxOe7LXIOu7+W/z/iGjTKGpxhE=
