@@ -29,6 +29,6 @@
     "node": ">= 4.0.0"
   },
   "scripts": {
-    "test": "mocha test/*.test.js -t 5000"
+    "test": "DEBUG=* mocha test/*.test.js -t 5000"
   }
 }
